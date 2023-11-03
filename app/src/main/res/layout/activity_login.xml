@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    tools:context=".login.LoginActivity">
+
+    <TextView
+        android:id="@+id/logintext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:gravity="center_horizontal"
+        android:text="회원 로그인"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/blabla"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="130dp"
+        android:gravity="center_horizontal"
+        android:text="블라블라블라"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+
+    <EditText
+        android:id="@+id/editID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/box_id"
+        android:ems="10"
+        android:hint="아이디"
+        android:textColor="#7E7E7E"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:fontFamily="@font/suitebold"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/ediPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/box_id"
+        android:ems="10"
+        android:hint="비밀번호"
+        android:textColor="#7E7E7E"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:padding="10dp"
+        android:fontFamily="@font/suitebold"
+        android:importantForAutofill="no" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/autoLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="75dp"
+            android:layout_marginEnd="10dp"
+            android:text="자동 로그인" />
+
+        <CheckBox
+            android:id="@+id/biometricsLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="생체인식 로그인" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/Findpassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="75dp"
+            android:textStyle="bold"
+            android:text="비밀번호를 잊어버리셨나요?"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/singin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="75dp"
+            android:textStyle="bold"
+            android:text="회원가입"
+            android:textColor="@color/black" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/quickloginbutton"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#F56A6A"
+        android:fontFamily="@font/suiteextrabold"
+        android:text="간편 로그인"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/loginbutton"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#F56A6A"
+        android:fontFamily="@font/suiteextrabold"
+        android:text="로그인"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+</LinearLayout>
