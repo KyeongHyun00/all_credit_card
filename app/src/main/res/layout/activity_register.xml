@@ -69,7 +69,7 @@
             tools:ignore="Autofill" />
 
         <EditText
-            android:id="@+id/join_registration_number"
+            android:id="@+id/join_regist_numr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -87,7 +87,7 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/join_phoneNumber"
+                android:id="@+id/join_phone_num"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
@@ -119,7 +119,7 @@
             android:orientation="horizontal">
 
             <EditText
-                android:id="@+id/certificationNumber"
+                android:id="@+id/certi_num"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
@@ -146,7 +146,7 @@
         </LinearLayout>
 
         <EditText
-            android:id="@+id/join_password"
+            android:id="@+id/join_pw"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
@@ -159,7 +159,7 @@
             tools:ignore="Autofill"/>
 
         <EditText
-            android:id="@+id/join_passwordCheck"
+            android:id="@+id/join_pwCheck"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round_shape"
@@ -172,7 +172,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/joinInButton"
+        android:id="@+id/join_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
