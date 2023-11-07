@@ -19,14 +19,14 @@ import retrofit2.converter.scalars.ScalarsConverterFactory
 
 class LoginActivity : AppCompatActivity() {
 
-    private lateinit var id : EditText
-    private lateinit var pw : EditText
-    private lateinit var autoLogin : CheckBox
-    private lateinit var bioLogin : CheckBox
-    private lateinit var pwFind : TextView
-    private lateinit var sign : TextView
-    private lateinit var quickLogin : Button
-    private lateinit var loginButton : Button
+    private lateinit var id: EditText
+    private lateinit var pw: EditText
+    private lateinit var autoLogin: CheckBox
+    private lateinit var bioLogin: CheckBox
+    private lateinit var pwFind: TextView
+    private lateinit var sign: TextView
+    private lateinit var quickLogin: Button
+    private lateinit var loginButton: Button
 
     private lateinit var retrofit: Retrofit
     private var service: APIService? = null
@@ -55,15 +55,14 @@ class LoginActivity : AppCompatActivity() {
 
             val emptyField = fieldMap.entries.find { it.key.isEmpty() }
 
-            if(emptyField != null) {
+            if (emptyField != null) {
                 val fieldName = emptyField.value
                 Toast.makeText(this, "${fieldName}을(를) 입력해주세요.", Toast.LENGTH_SHORT).show()
-            }else{
+            } else {
                 loginRequest(login_id, login_pw)
             }
-            }
-
         }
+    }
 
     private fun firstInit() {
         val gson: Gson = GsonBuilder().setLenient().create()
@@ -75,7 +74,7 @@ class LoginActivity : AppCompatActivity() {
         service = retrofit.create(APIService::class.java)
     }
 
-    private fun loginRequest(id: String, pw:String): Boolean{
+    private fun loginRequest(id: String, pw: String): Boolean {
         //DB에서 ID, PW 받아와서 체크하기
         return true
     }

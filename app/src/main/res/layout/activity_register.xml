@@ -11,7 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:orientation="vertical">
 
         <TextView
@@ -21,8 +21,9 @@
             android:gravity="center_horizontal"
             android:text="회원가입"
             android:textAlignment="center"
+            android:fontFamily="@font/suiteextrabold"
             android:textColor="@color/black"
-            android:textSize="25sp"
+            android:textSize="30sp"
             android:textStyle="bold" />
 
         <TextView
@@ -32,6 +33,7 @@
             android:gravity="center_horizontal"
             android:text="블라블라블라"
             android:textAlignment="center"
+            android:textColor="@color/gray"
             android:textSize="15sp"
             android:textStyle="bold" />
     </LinearLayout>
@@ -39,20 +41,32 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="10dp"
         android:orientation="vertical">
+
+        <Button
+            android:id="@+id/verification_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/magenta70"
+            android:fontFamily="@font/suiteextrabold"
+            android:text="본  인  인  증"
+            android:textColor="@color/white"
+            android:textSize="23sp" />
 
         <EditText
             android:id="@+id/join_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/round_shape"
             android:ems="10"
             android:fontFamily="@font/suitebold"
             android:hint="성명"
             android:inputType="text"
-            android:minHeight="48dp"
+            android:minHeight="35dp"
             android:padding="10dp"
             tools:ignore="Autofill" />
 
@@ -60,13 +74,13 @@
             android:id="@+id/join_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/round_shape"
             android:ems="10"
             android:fontFamily="@font/suitebold"
             android:hint="아이디"
-            android:inputType="textPersonName"
-            android:minHeight="48dp"
+            android:inputType="text"
+            android:minHeight="35dp"
             android:padding="10dp"
             tools:ignore="Autofill" />
 
@@ -74,13 +88,13 @@
             android:id="@+id/join_regist_numr"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/round_shape"
             android:ems="10"
             android:fontFamily="@font/suitebold"
             android:hint="주민번호"
             android:inputType="number"
-            android:minHeight="48dp"
+            android:minHeight="35dp"
             android:padding="10dp"
             tools:ignore="Autofill" />
 
@@ -88,13 +102,13 @@
             android:id="@+id/join_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/round_shape"
             android:ems="10"
             android:fontFamily="@font/suitebold"
             android:hint="이메일"
             android:inputType="textEmailAddress"
-            android:minHeight="48dp"
+            android:minHeight="35dp"
             android:padding="10dp"
             tools:ignore="Autofill" />
 
@@ -108,14 +122,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/round_shape"
                 android:ems="10"
                 android:fontFamily="@font/suitebold"
                 android:hint="전화번호"
                 android:inputType="phone"
-                android:minHeight="48dp"
+                android:minHeight="35dp"
                 android:padding="10dp"
                 tools:ignore="Autofill" />
 
@@ -124,7 +138,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#F56A6A"
+                android:background="@drawable/round_shape_magenta"
                 android:fontFamily="@font/suiteextrabold"
                 android:text="번호 전송"
                 android:textColor="@color/white"
@@ -141,14 +155,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="10dp"
-                android:layout_marginBottom="10dp"
+                android:layout_marginBottom="1dp"
                 android:layout_weight="1"
                 android:background="@drawable/round_shape"
                 android:ems="10"
                 android:fontFamily="@font/suitebold"
                 android:hint="인증번호"
                 android:inputType="number"
-                android:minHeight="48dp"
+                android:minHeight="35dp"
                 android:padding="10dp"
                 tools:ignore="Autofill" />
 
@@ -157,7 +171,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="#F56A6A"
+                android:backgroundTint="@color/magenta70"
                 android:fontFamily="@font/suiteextrabold"
                 android:text="인증 확인"
                 android:textColor="@color/white"
@@ -168,13 +182,13 @@
             android:id="@+id/join_pw"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="5dp"
             android:background="@drawable/round_shape"
             android:ems="10"
             android:fontFamily="@font/suitebold"
             android:hint="비밀번호"
             android:inputType="textPassword"
-            android:minHeight="48dp"
+            android:minHeight="35dp"
             android:padding="10dp"
             tools:ignore="Autofill" />
 
@@ -197,10 +211,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:backgroundTint="#F56A6A"
+        android:backgroundTint="@color/magenta70"
         android:fontFamily="@font/suiteextrabold"
         android:textColor="@color/white"
-        android:textSize="20sp"
-        android:text="회원가입" />
+        android:textSize="23sp"
+        android:text="회 원  가 입" />
 
 </LinearLayout>
