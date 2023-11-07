@@ -114,16 +114,15 @@ class RegisterActivity : AppCompatActivity() {
             override fun onFailure(call: Call<String?>, t: Throwable) {
                 Toast.makeText(this@RegisterActivity, "서버 연결에 오류가 발생했습니다",Toast.LENGTH_SHORT).show()
             }
-
         })
     }
 
     private fun passwordCheck(pw: String, pwCheck: String): Boolean {
         return pw == pwCheck
     }
-/*
-    private fun certificateNumber(certiNum: Int) {
-       //인증번호 기능 구현 필요
-    }
- */
+    /*
+        private fun certificateNumber(certiNum: Int) {
+           //인증번호 기능 구현 필요
+        }
+     */
 }

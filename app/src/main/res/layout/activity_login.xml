@@ -51,7 +51,7 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/ediPassword"
+        android:id="@+id/editPW"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -101,7 +101,7 @@
             android:textColor="@color/black" />
 
         <TextView
-            android:id="@+id/singin"
+            android:id="@+id/signin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="75dp"
