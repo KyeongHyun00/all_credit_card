@@ -112,6 +112,7 @@ class RegisterActivity : AppCompatActivity() {
                 }
             }
             override fun onFailure(call: Call<String?>, t: Throwable) {
+                println("ERRORRRRR: " + t)
                 Toast.makeText(this@RegisterActivity, "서버 연결에 오류가 발생했습니다",Toast.LENGTH_SHORT).show()
             }
         })

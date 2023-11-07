@@ -1,5 +1,9 @@
 package com.project.allcreditcard.login
 
+import android.content.Context
+import android.content.Intent
+import android.content.SharedPreferences
+import android.content.SharedPreferences.Editor
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -12,10 +16,13 @@ import com.google.gson.GsonBuilder
 import com.project.allcreditcard.BuildConfig
 import com.project.allcreditcard.R
 import com.project.allcreditcard.utility.APIService
-import org.w3c.dom.Text
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.converter.scalars.ScalarsConverterFactory
+import java.io.IOException
 
 class LoginActivity : AppCompatActivity() {
 
@@ -32,9 +39,23 @@ class LoginActivity : AppCompatActivity() {
     private var service: APIService? = null
     private val url = BuildConfig.SERVER_IP
 
+    private lateinit var preferences: SharedPreferences
+    private lateinit var editor: Editor
+
+
+    override fun onStart() {
+        super.onStart()
+        preferences = getSharedPreferences("Account", Context.MODE_PRIVATE)
+        if(autoLogin.isChecked) {
+            Toast.makeText(this@LoginActivity, "!!!!!!!자동 로그인 성공!!!!!!!", Toast.LENGTH_SHORT).show()
+        }
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
+        preferences = getSharedPreferences("Account", Context.MODE_PRIVATE)
+        editor = preferences.edit()
 
         firstInit()
 
@@ -47,11 +68,21 @@ class LoginActivity : AppCompatActivity() {
         quickLogin = findViewById(R.id.quickloginbutton)
         loginButton = findViewById(R.id.loginbutton)
 
-        loginButton.setOnClickListener {
-            val login_id = id.text.toString()
-            val login_pw = pw.text.toString()
+        val storeID = preferences.getString("userID", "")
+        if(storeID != "") {
+            autoLogin.isChecked = true
+        }
 
-            val fieldMap = mapOf(login_id to "아이디", login_pw to "비밀번호")
+        sign.setOnClickListener{
+            startActivity(Intent(this, RegisterActivity::class.java))
+            finish()
+        }
+
+        loginButton.setOnClickListener {
+            val loginId = id.text.toString()
+            val loginPw = pw.text.toString()
+
+            val fieldMap = mapOf(loginId to "아이디", loginPw to "비밀번호")
 
             val emptyField = fieldMap.entries.find { it.key.isEmpty() }
 
@@ -59,7 +90,7 @@ class LoginActivity : AppCompatActivity() {
                 val fieldName = emptyField.value
                 Toast.makeText(this, "${fieldName}을(를) 입력해주세요.", Toast.LENGTH_SHORT).show()
             } else {
-                loginRequest(login_id, login_pw)
+                loginRequest(loginId, loginPw)
             }
         }
     }
@@ -75,7 +106,41 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun loginRequest(id: String, pw: String): Boolean {
-        //DB에서 ID, PW 받아와서 체크하기
+        val callPost = service?.requestLogin(id, pw)
+        callPost?.enqueue(object: Callback<String?> {
+            override fun onResponse(call: Call<String?>, response: Response<String?>) {
+                if(response.isSuccessful) {
+                    try {
+                        val result = response.body()!!.toString()
+                        if(result == "pass") {
+                            if(autoLogin.isChecked) {
+                                editor.putString("userID", id)
+                                editor.putString("userPW", pw)
+                                editor.apply()
+
+                                Toast.makeText(this@LoginActivity, "로그인 성공!!!!", Toast.LENGTH_SHORT).show()
+                            }
+                            else {
+                                Toast.makeText(this@LoginActivity, "로그인 성공!!!!", Toast.LENGTH_SHORT).show()
+                            }
+                        }
+                        if(result == "pwFail") {
+                            Toast.makeText(this@LoginActivity,"비밀번호가 틀립니다", Toast.LENGTH_SHORT).show()
+                        }
+                        if(result == "idFail"){
+                            Toast.makeText(this@LoginActivity,"아이디가 틀립니다",Toast.LENGTH_SHORT).show()
+                        }
+                    }
+                    catch (e: IOException) {
+                        e.printStackTrace()
+                    }
+                }
+            }
+            override fun onFailure(call: Call<String?>, t: Throwable) {
+                Toast.makeText(this@LoginActivity, "서버 연결에 오류가 발생했습니다",Toast.LENGTH_SHORT).show()
+            }
+
+        })
         return true
     }
 }
