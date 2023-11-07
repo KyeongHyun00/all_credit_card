@@ -17,8 +17,14 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="34">
         <activity
+            android:name=".login.ChangePasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.ForgetPasswordActivity"
+            android:exported="false" />
+        <activity
             android:name=".login.RegisterActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".login.LoginActivity"
             android:exported="true">
@@ -33,8 +39,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false">
-        </activity>
+            android:exported="false" />
     </application>
 
 </manifest>

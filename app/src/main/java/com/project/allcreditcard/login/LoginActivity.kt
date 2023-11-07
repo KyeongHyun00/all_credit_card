@@ -78,6 +78,10 @@ class LoginActivity : AppCompatActivity() {
             finish()
         }
 
+        pwFind.setOnClickListener{
+            startActivity(Intent(this@LoginActivity, ForgetPasswordActivity::class.java))
+        }
+
         loginButton.setOnClickListener {
             val loginId = id.text.toString()
             val loginPw = pw.text.toString()

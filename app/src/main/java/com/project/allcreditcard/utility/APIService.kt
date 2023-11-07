@@ -31,4 +31,11 @@ interface APIService {
         @Field("joinPhoneNum") joinPhoneNum: String,
         @Field("joinPw") joinPw: String
     ): Call<String>
+
+    @FormUrlEncoded
+    @POST("/app/changePw")
+    fun changePw(
+        @Field("userId") userId: String,
+        @Field("changePw") changePw: String
+    ): Call<String>
 }
