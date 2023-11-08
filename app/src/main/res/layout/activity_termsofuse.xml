@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="30dp"
+    tools:context=".termsofuse">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/termsofuse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="이용약관"
+            android:textAlignment="center"
+            android:fontFamily="@font/suiteextrabold"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/essentialText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp"
+                android:background="@drawable/round_shape"
+                android:minHeight="105dp"
+                android:text="필수 이용약관 내용 삽입하기" />
+
+            <CheckBox
+                android:id="@+id/essentialCheck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="(필수)해당 이용약관에 대하여 숙지하였으며 이에 동의합니다." />
+
+            <TextView
+                android:id="@+id/checkText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:padding="10dp"
+                android:background="@drawable/round_shape"
+                android:minHeight="105dp"
+                android:text="선택 이용약관에 대한 내용 삽입하기" />
+
+            <CheckBox
+                android:id="@+id/doubleCheck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="(선택)해당 이용약관에 대하여 숙지하였으며 이에 동의합니다." />
+
+            <CheckBox
+                android:id="@+id/all_check"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="모든 이용약관에 대하여 숙지하였으며 이에 동의합니다." />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/cancelButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="20dp"
+                    android:backgroundTint="@color/orange80"
+                    android:text="취소" />
+
+                <Button
+                    android:id="@+id/successButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="20dp"
+                    android:backgroundTint="@color/orange80"
+                    android:text="확인" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

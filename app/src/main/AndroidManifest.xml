@@ -17,6 +17,18 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="34">
         <activity
+            android:name=".termsoflaws"
+            android:exported="false" />
+        <activity
+            android:name=".termsofuse"
+            android:exported="false" />
+        <activity
+            android:name=".terms_of_laws"
+            android:exported="false" />
+        <activity
+            android:name=".terms_of_use"
+            android:exported="false" />
+        <activity
             android:name=".login.ChangePasswordActivity"
             android:exported="false" />
         <activity
