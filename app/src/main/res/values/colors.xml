@@ -3,7 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="gray">#FF464646</color>
-    <color name="magenta">#FFBE3455</color>
-    <color name="magenta70">#A6BE3455</color>
+    <color name="orange">#FFFB6544</color>
+    <color name="oragne80">#CCFB6544</color>
 
 </resources>
