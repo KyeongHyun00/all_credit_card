@@ -40,7 +40,7 @@
                 android:text="법률약관 내용 삽입하기" />
 
             <CheckBox
-                android:id="@+id/essentialCheck"
+                android:id="@+id/essentialCheckOne"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
@@ -64,7 +64,7 @@
                 android:text="(필수)해당 법률약관에 대하여 숙지하였으며 이에 동의합니다." />
 
             <TextView
-                android:id="@+id/essentialThr"
+                android:id="@+id/essentialThree"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -74,7 +74,7 @@
                 android:text="법률약관 내용 삽입하기" />
 
             <CheckBox
-                android:id="@+id/essentialCheckThr"
+                android:id="@+id/essentialCheckThree"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"

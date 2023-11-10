@@ -27,6 +27,7 @@ import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.project.allcreditcard.BuildConfig
 import com.project.allcreditcard.R
+import com.project.allcreditcard.TermsOfLawsActivity
 import com.project.allcreditcard.utility.APIService
 import retrofit2.Call
 import retrofit2.Callback
@@ -123,6 +124,15 @@ class LoginActivity : AppCompatActivity() {
 
         pwFind.setOnClickListener {
             startActivity(Intent(this@LoginActivity, ForgetPasswordActivity::class.java))
+        }
+
+        quickLogin.setOnClickListener {
+            /*val dialog = CustomDialog(this)
+            dialog.setOnClickedListener {
+                Toast.makeText(this@LoginActivity, it, Toast.LENGTH_SHORT).show()
+            }
+            dialog.show("제목", "내용 부분 입니다.")*/
+            startActivity(Intent(this@LoginActivity, TermsOfLawsActivity::class.java))
         }
 
         loginButton.setOnClickListener {
