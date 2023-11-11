@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".account_list">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/account_info"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="계좌 정보"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:backgroundTint="#FFB09C9C"
+            android:fontFamily="@font/suiteextrabold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="259dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/account_1"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:text="연결[   -   ]\n잔액  원\n사용 합계  원"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/suiteextrabold"/>
+
+            <TextView
+                android:id="@+id/account_2"
+                android:layout_width="370dp"
+                android:layout_height="wrap_content"
+                android:text="연결[   -   ]\n잔액  원\n사용 합계  원"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/suiteextrabold"/>
+
+            <TextView
+                android:id="@+id/account_plus"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:textSize="30dp"
+                android:text="+"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/card_info"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="카드 정보"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/suiteextrabold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="276dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/card_1"
+                android:layout_width="0dp"
+                android:layout_height="147dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/suiteextrabold"
+                android:text="    카드\n\n결제 금액\n  원\n\n결제 예정일\n2023.-.-" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="0dp"
+                android:layout_height="147dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/suiteextrabold"
+                android:text="    카드\n\n결제 금액\n  원\n\n결제 예정일\n2023.-.-" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="0dp"
+                android:layout_height="147dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/suiteextrabold"
+                android:gravity="center"
+                android:text="+"
+                android:textSize="30dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp">
+
+            <Button
+                android:id="@+id/navigation_Home"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="홈" />
+
+            <Button
+                android:id="@+id/navigation_CreditPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="신용점수" />
+
+            <Button
+                android:id="@+id/navigation_Mypage"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="마이페이지" />
+
+            <Button
+                android:id="@+id/navigation_Setting"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="설정" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
