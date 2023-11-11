@@ -21,21 +21,13 @@
             android:name=".MyPageActivity"
             android:exported="false" />
         <activity
-            android:name=".utility.Setting"
+            android:name=".AccountListActivity"
             android:exported="false" />
         <activity
-            android:name=".account_list"
-            android:exported="false" />
-
-        <meta-data
-            android:name=".account_list"
-            android:resource="@xml/account_list" />
-
-        <activity
-            android:name=".credit_information"
+            android:name=".CreditInformationActivity"
             android:exported="false" />
         <activity
-            android:name=".amount_payment"
+            android:name=".AmountPaymentActivity"
             android:exported="false" />
         <activity
             android:name=".TermsOfLawsActivity"
