@@ -18,7 +18,7 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="34">
         <activity
-            android:name=".Setting"
+            android:name=".MyPageActivity"
             android:exported="false" />
         <activity
             android:name=".utility.Setting"

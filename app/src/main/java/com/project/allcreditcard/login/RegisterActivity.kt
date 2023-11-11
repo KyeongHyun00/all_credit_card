@@ -26,7 +26,7 @@ class RegisterActivity : AppCompatActivity() {
     private lateinit var registNum : EditText
     private lateinit var email: EditText
     private lateinit var phoneNum : EditText
-    private lateinit var certiNum : EditText
+    //private lateinit var certiNum : EditText
     private lateinit var pw : EditText
     private lateinit var pwCheck : EditText
     private lateinit var joinButton : Button
@@ -48,13 +48,13 @@ class RegisterActivity : AppCompatActivity() {
         registNum = findViewById(R.id.join_regist_numr)
         email = findViewById(R.id.join_email)
         phoneNum = findViewById(R.id.join_phone_num)
-        certiNum = findViewById(R.id.certi_num)
+        //certiNum = findViewById(R.id.certi_num)
         pw = findViewById(R.id.join_pw)
         pwCheck = findViewById(R.id.join_pwCheck)
 
         joinButton = findViewById(R.id.join_button)
-        sendButton = findViewById(R.id.sendNumber)
-        checkButton = findViewById(R.id.checkNumber)
+        //sendButton = findViewById(R.id.sendNumber)
+        //checkButton = findViewById(R.id.checkNumber)
 
         joinButton.setOnClickListener {
             val joinName = name.text.toString()
@@ -62,12 +62,12 @@ class RegisterActivity : AppCompatActivity() {
             val joinRegistNum = registNum.text.toString()
             val joinEmail = email.text.toString()
             val joinPhoneNum = phoneNum.text.toString()
-            val joinCertiNum = certiNum.text.toString()
+            //val joinCertiNum = certiNum.text.toString()
             val joinPw = pw.text.toString()
             val joinPwCheck = pwCheck.text.toString()
 
             val fieldMap = mapOf(joinName to "이름", joinId to "아이디", joinRegistNum to "주민번호", joinEmail to "이메일",
-                joinPhoneNum to "전화번호", joinCertiNum to "인증번호", joinPw to "비밀번호", joinPwCheck to "비밀번호 확인")
+                joinPhoneNum to "전화번호", joinPw to "비밀번호", joinPwCheck to "비밀번호 확인")
 
             val emptyField = fieldMap.entries.find { it.key.isEmpty() }
             if (emptyField != null) {
