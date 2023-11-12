@@ -5,36 +5,36 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class CreditInformationActivity : AppCompatActivity() {
+class SettingActivity : AppCompatActivity() {
 
     private val onNavigationItemSelectedListener =
         BottomNavigationView.OnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> {
-                    startActivity(Intent(this@CreditInformationActivity, MainActivity::class.java))
+                    startActivity(Intent(this@SettingActivity, MainActivity::class.java))
                     finish()
                     true
                 }
-                R.id.nav_CreditPoint -> true
+                R.id.nav_CreditPoint -> {
+                    startActivity(Intent(this@SettingActivity, CreditInformationActivity::class.java))
+                    finish()
+                    true
+                }
                 R.id.nav_MyPage -> {
-                    startActivity(Intent(this@CreditInformationActivity, MyPageActivity::class.java))
+                    startActivity(Intent(this@SettingActivity, MyPageActivity::class.java))
                     finish()
                     true
                 }
-                else -> {
-                    startActivity(Intent(this@CreditInformationActivity, SettingActivity::class.java))
-                    finish()
-                    true
-                }
+                else -> true
             }
         }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_credit_information)
+        setContentView(R.layout.activity_setting)
 
-        val navView: BottomNavigationView = findViewById(R.id.creditscore_nav)
+        val navView: BottomNavigationView = findViewById(R.id.setting_nav)
         navView.setOnItemSelectedListener(onNavigationItemSelectedListener)
-        navView.menu.findItem(R.id.nav_CreditPoint).isChecked = true
+        navView.menu.findItem(R.id.nav_Setting).isChecked = true
     }
 }

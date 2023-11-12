@@ -26,6 +26,7 @@ import androidx.core.content.ContextCompat
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.project.allcreditcard.BuildConfig
+import com.project.allcreditcard.MainActivity
 import com.project.allcreditcard.R
 import com.project.allcreditcard.TermsOfLawsActivity
 import com.project.allcreditcard.utility.APIService
@@ -284,6 +285,9 @@ class LoginActivity : AppCompatActivity() {
         editor.apply()
 
         showToast("로그인 성공!!!!")
+
+        startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+        finish()
     }
 
     @RequiresApi(Build.VERSION_CODES.R)
@@ -321,6 +325,8 @@ class LoginActivity : AppCompatActivity() {
         editor.putString("bioLoginUse", "")
         editor.apply()
         showToast("로그인 성공!!!!")
+        startActivity(Intent(this@LoginActivity, MainActivity::class.java))
+        finish()
     }
 
     private var backPressedTime: Long = 0
