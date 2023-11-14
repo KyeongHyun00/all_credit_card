@@ -1,10 +1,14 @@
-package com.project.allcreditcard
+package com.project.allcreditcard.account
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import at.grabner.circleprogress.CircleProgressView
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.project.allcreditcard.MainActivity
+import com.project.allcreditcard.MyPageActivity
+import com.project.allcreditcard.R
+import com.project.allcreditcard.SettingActivity
 
 class CreditInformationActivity : AppCompatActivity() {
 
@@ -36,8 +40,8 @@ class CreditInformationActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_credit_information)
 
-        creditScoreChart = findViewById(R.id.creditScoreChart)
 
+        creditScoreChart = findViewById(R.id.creditScoreChart)
         creditScoreChart.setValue(30F)
 
         val navView: BottomNavigationView = findViewById(R.id.creditscore_nav)

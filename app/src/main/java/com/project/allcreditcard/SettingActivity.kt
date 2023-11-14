@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.project.allcreditcard.account.CreditInformationActivity
 
 class SettingActivity : AppCompatActivity() {
 

@@ -1,4 +1,4 @@
-package com.project.allcreditcard
+package com.project.allcreditcard.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.Toast
+import com.project.allcreditcard.R
 
 class TermsOfLawsActivity : AppCompatActivity() {
 

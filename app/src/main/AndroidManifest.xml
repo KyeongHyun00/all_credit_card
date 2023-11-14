@@ -18,8 +18,14 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="34">
         <activity
-            android:name=".loading"
-            android:exported="false" />
+            android:name=".LoadingActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".SettingActivity"
             android:exported="false" />
@@ -27,19 +33,19 @@
             android:name=".MyPageActivity"
             android:exported="false" />
         <activity
-            android:name=".AccountListActivity"
+            android:name=".account.AccountListActivity"
             android:exported="false" />
         <activity
-            android:name=".CreditInformationActivity"
+            android:name=".account.CreditInformationActivity"
             android:exported="false" />
         <activity
-            android:name=".AmountPaymentActivity"
+            android:name=".account.AmountPaymentActivity"
             android:exported="false" />
         <activity
-            android:name=".TermsOfLawsActivity"
+            android:name=".login.TermsOfLawsActivity"
             android:exported="false" />
         <activity
-            android:name=".TermsOfUseActivity"
+            android:name=".login.TermsOfUseActivity"
             android:exported="false" />
         <activity
             android:name=".login.ChangePasswordActivity"
@@ -52,13 +58,7 @@
             android:exported="false" />
         <activity
             android:name=".login.LoginActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:exported="false"/>
         <activity
             android:name=".login.PersonalVerificationActivity"
             android:exported="false" />

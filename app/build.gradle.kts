@@ -67,4 +67,6 @@ dependencies {
     implementation("androidx.biometric:biometric:1.2.0-alpha05")
     //Chart
     implementation("com.github.jakob-grabner:Circle-Progress-View:1.4")
+    //Loading Animations
+    implementation("com.airbnb.android:lottie:6.1.0")
 }

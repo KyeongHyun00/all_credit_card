@@ -28,7 +28,6 @@ import com.google.gson.GsonBuilder
 import com.project.allcreditcard.BuildConfig
 import com.project.allcreditcard.MainActivity
 import com.project.allcreditcard.R
-import com.project.allcreditcard.TermsOfLawsActivity
 import com.project.allcreditcard.utility.APIService
 import retrofit2.Call
 import retrofit2.Callback
