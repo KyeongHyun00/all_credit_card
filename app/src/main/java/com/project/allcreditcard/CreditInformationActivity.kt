@@ -3,9 +3,12 @@ package com.project.allcreditcard
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import at.grabner.circleprogress.CircleProgressView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class CreditInformationActivity : AppCompatActivity() {
+
+    private lateinit var creditScoreChart: CircleProgressView
 
     private val onNavigationItemSelectedListener =
         BottomNavigationView.OnNavigationItemSelectedListener { item ->
@@ -32,6 +35,10 @@ class CreditInformationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_credit_information)
+
+        creditScoreChart = findViewById(R.id.creditScoreChart)
+
+        creditScoreChart.setValue(30F)
 
         val navView: BottomNavigationView = findViewById(R.id.creditscore_nav)
         navView.setOnItemSelectedListener(onNavigationItemSelectedListener)

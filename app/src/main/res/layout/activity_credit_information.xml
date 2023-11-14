@@ -12,13 +12,24 @@
         android:layout_height="0dp"
         android:orientation="vertical"
         android:gravity="center_horizontal"
+        android:padding="30dp"
         android:layout_weight="1">
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="신용점수 화면" />
+        <at.grabner.circleprogress.CircleProgressView
+            android:id="@+id/creditScoreChart"
+            android:layout_width="280dp"
+            android:layout_height="280dp"
+            app:cpv_autoTextSize="true"
+            app:cpv_barColor="#FBC80A"
+            app:cpv_barWidth="30dp"
+            app:cpv_maxValue="1000"
+            app:cpv_rimWidth="30dp"
+            app:cpv_rimColor="@color/orange"
+            app:cpv_showUnit="true"
+            app:cpv_unit="점"
+            app:cpv_unitPosition="right_bottom"
+            app:cpv_value="900"
+            app:cpv_textMode="Value"/>
     </LinearLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

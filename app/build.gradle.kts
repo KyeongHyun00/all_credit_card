@@ -65,4 +65,6 @@ dependencies {
     implementation ("com.squareup.okhttp3:okhttp-urlconnection:4.9.1")
     //BiometricPrompt
     implementation("androidx.biometric:biometric:1.2.0-alpha05")
+    //Chart
+    implementation("com.github.jakob-grabner:Circle-Progress-View:1.4")
 }
