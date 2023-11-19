@@ -8,7 +8,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.project.allcreditcard.MainActivity
 import com.project.allcreditcard.MyPageActivity
 import com.project.allcreditcard.R
-import com.project.allcreditcard.SettingActivity
 
 class CreditInformationActivity : AppCompatActivity() {
 
@@ -23,13 +22,13 @@ class CreditInformationActivity : AppCompatActivity() {
                     true
                 }
                 R.id.nav_CreditPoint -> true
-                R.id.nav_MyPage -> {
-                    startActivity(Intent(this@CreditInformationActivity, MyPageActivity::class.java))
+                R.id.nav_Payment -> {
+                    startActivity(Intent(this@CreditInformationActivity, AmountPaymentActivity::class.java))
                     finish()
                     true
                 }
                 else -> {
-                    startActivity(Intent(this@CreditInformationActivity, SettingActivity::class.java))
+                    startActivity(Intent(this@CreditInformationActivity, MyPageActivity::class.java))
                     finish()
                     true
                 }

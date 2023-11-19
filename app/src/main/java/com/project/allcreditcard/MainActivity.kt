@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.project.allcreditcard.account.AmountPaymentActivity
 import com.project.allcreditcard.account.CreditInformationActivity
 
 class MainActivity : AppCompatActivity() {
@@ -17,13 +18,13 @@ class MainActivity : AppCompatActivity() {
                     finish()
                     true
                 }
-                R.id.nav_MyPage -> {
-                    startActivity(Intent(this@MainActivity, MyPageActivity::class.java))
+                R.id.nav_Payment -> {
+                    startActivity(Intent(this@MainActivity, AmountPaymentActivity::class.java))
                     finish()
                     true
                 }
                 else -> {
-                    startActivity(Intent(this@MainActivity, SettingActivity::class.java))
+                    startActivity(Intent(this@MainActivity, MyPageActivity::class.java))
                     finish()
                     true
                 }

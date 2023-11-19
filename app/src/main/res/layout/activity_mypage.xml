@@ -7,136 +7,345 @@
     tools:context=".MyPageActivity"
     android:orientation="vertical">
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:layout_weight="1"
-        android:layout_margin="25dp"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/profile_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            tools:srcCompat="@drawable/ic_launcher_background" />
-
-        <TextView
-            android:id="@+id/user_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="홍길동"
-            android:textAlignment="center"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+        tools:ignore="InefficientWeight">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="horizontal">
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
-            <Button
-                android:id="@+id/account_inquiry"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/orange80"
-                android:padding="5dp"
-                android:text="계좌 조회"
-                android:textColor="@color/white"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                tools:ignore="ButtonStyle" />
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                app:srcCompat="@drawable/profile"
+                tools:ignore="ContentDescription" />
 
-            <Button
-                android:id="@+id/card_inquiry"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/orange80"
-                android:padding="5dp"
-                android:text="카드 조회"
-                android:textColor="@color/white"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                tools:ignore="ButtonStyle"  />
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:text="홍길동"
+                android:textAlignment="center"
+                android:textSize="25sp"
+                android:textStyle="bold" />
 
-            <Button
-                android:id="@+id/security"
+            <LinearLayout
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/account_check"
+                        tools:ignore="ContentDescription" />
+
+                    <Button
+                        android:id="@+id/account_inquiry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/orange80"
+                        android:padding="5dp"
+                        android:text="계좌 조회"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/suitebold"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="ButtonStyle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/card_check"
+                        tools:ignore="ContentDescription" />
+
+                    <Button
+                        android:id="@+id/card_inquiry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/orange80"
+                        android:padding="5dp"
+                        android:text="카드 조회"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/suitebold"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="ButtonStyle" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/security"
+                        tools:ignore="ContentDescription" />
+
+                    <Button
+                        android:id="@+id/security"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/orange80"
+                        android:padding="5dp"
+                        android:text="인증/보안"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/suitebold"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="ButtonStyle" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/credit_score"
+                        tools:ignore="ContentDescription" />
+
+                    <Button
+                        android:id="@+id/Credit_Point"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/orange80"
+                        android:padding="5dp"
+                        android:text="신용 점수"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/suitebold"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="ButtonStyle" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/consumption_details"
+                        tools:ignore="ContentDescription" />
+
+                    <Button
+                        android:id="@+id/Consumption_history"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/orange80"
+                        android:padding="5dp"
+                        android:text="소비 내역"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/suitebold"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="ButtonStyle" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView6"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/notice"
+                        tools:ignore="ContentDescription" />
+
+                    <Button
+                        android:id="@+id/notice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="@color/orange80"
+                        android:padding="5dp"
+                        android:text="공지사항"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/suitebold"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:ignore="ButtonStyle" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/orange80"
-                android:padding="5dp"
-                android:text="인증/보안"
-                android:textColor="@color/white"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                tools:ignore="ButtonStyle"  />
+                android:layout_margin="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView26"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/suitebold"
+                    android:text="설정"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/round_shape"
+                    android:fontFamily="@font/suitebold"
+                    android:padding="7dp"
+                    android:text="이용약관 보기"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/round_shape"
+                    android:fontFamily="@font/suitebold"
+                    android:padding="7dp"
+                    android:text="법률약관 보기"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView27"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/round_shape"
+                    android:fontFamily="@font/suitebold"
+                    android:padding="7dp"
+                    android:text="고객센터"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView28"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/round_shape"
+                    android:fontFamily="@font/suitebold"
+                    android:padding="7dp"
+                    android:text="알림 설정"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView23"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/round_shape"
+                    android:fontFamily="@font/suitebold"
+                    android:padding="7dp"
+                    android:text="내 정보 변경"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView24"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/round_shape"
+                    android:fontFamily="@font/suitebold"
+                    android:padding="7dp"
+                    android:text="로그아웃"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/round_shape"
+                    android:fontFamily="@font/suitebold"
+                    android:padding="7dp"
+                    android:text="회원탈퇴"
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
         </LinearLayout>
+    </ScrollView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/Credit_Point"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/orange80"
-                android:padding="5dp"
-                android:text="신용 점수"
-                android:textColor="@color/white"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                tools:ignore="ButtonStyle"  />
-
-            <Button
-                android:id="@+id/Consumption_history"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/orange80"
-                android:padding="5dp"
-                android:text="소비 내역"
-                android:textColor="@color/white"
-                android:textSize="15sp"
-                android:textStyle="bold"
-                tools:ignore="ButtonStyle"  />
-
-            <Button
-                android:id="@+id/notice"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:backgroundTint="@color/orange80"
-                android:padding="5dp"
-                android:text="공지사항\n고객센터"
-                android:textColor="@color/white"
-                android:textSize="11sp"
-                android:textStyle="bold"
-                tools:ignore="ButtonStyle"  />
-        </LinearLayout>
-    </LinearLayout>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/mypage_nav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:menu="@menu/bottom_navigation_menu"
         android:layout_gravity="bottom"
-        app:labelVisibilityMode="labeled"/>
+        app:labelVisibilityMode="labeled"
+        tools:ignore="VisualLintBottomNav" />
 
 </LinearLayout>

@@ -6,10 +6,10 @@
     <item android:id="@+id/nav_CreditPoint"
         android:icon="@drawable/baseline_money_24"
         android:title="Credit Score"/>
+    <item android:id="@+id/nav_Payment"
+        android:icon="@drawable/baseline_payment_24"
+        android:title="Payment"/>
     <item android:id="@+id/nav_MyPage"
         android:icon="@drawable/baseline_contacts_24"
         android:title="MyPage"/>
-    <item android:id="@+id/nav_Setting"
-        android:icon="@drawable/baseline_settings_24"
-        android:title="Setting"/>
 </menu>
