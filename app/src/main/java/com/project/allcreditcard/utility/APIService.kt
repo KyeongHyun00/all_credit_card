@@ -33,6 +33,12 @@ interface APIService {
     ): Call<String>
 
     @FormUrlEncoded
+    @POST("/app/unregister")
+    fun requestUnregister(
+        @Field("userID") userID: String
+    ): Call<String>
+
+    @FormUrlEncoded
     @POST("/app/changePw")
     fun changePw(
         @Field("userId") userId: String,

@@ -132,12 +132,13 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this@LoginActivity, it, Toast.LENGTH_SHORT).show()
             }
             dialog.show("제목", "내용 부분 입니다.")*/
-            startActivity(Intent(this@LoginActivity, TermsOfLawsActivity::class.java))
+            //startActivity(Intent(this@LoginActivity, TermsOfLawsActivity::class.java))
         }
 
         loginButton.setOnClickListener {
             val loginId = id.text.toString()
             val loginPw = pw.text.toString()
+
 
             val fieldMap = mapOf(loginId to "아이디", loginPw to "비밀번호")
 
@@ -281,7 +282,7 @@ class LoginActivity : AppCompatActivity() {
         editor.putString("userID", userID)
         editor.putString("userPW", userPW)
         editor.putString("bioLoginUse", bioLoginUse)
-        editor.apply()
+        editor.commit()
 
         showToast("로그인 성공!!!!")
 
@@ -293,6 +294,7 @@ class LoginActivity : AppCompatActivity() {
     private fun login(result: String, id: String, pw: String) {
         when (result) {
             "pass" -> {
+                editor.putString("saveID", id)
                 if (autoLogin.isChecked) {
                     if (bioLogin.isChecked) {
                         idData = id
