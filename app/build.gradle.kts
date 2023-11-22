@@ -3,6 +3,7 @@ import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -69,4 +70,8 @@ dependencies {
     implementation("com.github.jakob-grabner:Circle-Progress-View:1.4")
     //Loading Animations
     implementation("com.airbnb.android:lottie:6.1.0")
+    //Firebase
+    implementation(platform("com.google.firebase:firebase-bom:32.6.0"))
+    implementation("com.google.firebase:firebase-analytics")
+    implementation("com.google.firebase:firebase-auth-ktx")
 }
