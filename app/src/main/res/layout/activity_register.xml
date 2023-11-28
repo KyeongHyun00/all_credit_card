@@ -28,115 +28,109 @@
 
     </LinearLayout>
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:orientation="vertical">
+
+
+            <EditText
+                android:id="@+id/join_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/round_shape"
+                android:ems="10"
+                android:fontFamily="@font/suitebold"
+                android:hint="성명"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                tools:ignore="Autofill" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="vertical">
-
+                android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/join_name"
-                    android:layout_width="match_parent"
+                    android:id="@+id/join_id"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/round_shape"
                     android:ems="10"
                     android:fontFamily="@font/suitebold"
-                    android:hint="성명"
+                    android:hint="아이디"
                     android:inputType="text"
                     android:minHeight="48dp"
                     android:padding="10dp"
                     tools:ignore="Autofill" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <EditText
-                        android:id="@+id/join_id"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginEnd="10dp"
-                        android:background="@drawable/round_shape"
-                        android:ems="10"
-                        android:fontFamily="@font/suitebold"
-                        android:hint="아이디"
-                        android:inputType="text"
-                        android:minHeight="48dp"
-                        android:padding="10dp"
-                        tools:ignore="Autofill" />
-
-
-                    <Button
-                        android:id="@+id/id_Check"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="0"
-                        android:backgroundTint="@color/orange80"
-                        android:fontFamily="@font/suiteextrabold"
-                        android:text="중복 확인"
-                        android:textColor="@color/white"
-                        android:textSize="13sp" />
-                </LinearLayout>
-
-                <EditText
-                    android:id="@+id/join_regist_numr"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/round_shape"
-                    android:ems="10"
-                    android:fontFamily="@font/suitebold"
-                    android:hint="주민번호"
-                    android:inputType="number"
-                    android:minHeight="48dp"
-                    android:padding="10dp"
-                    tools:ignore="Autofill" />
 
                 <Button
-                    android:id="@+id/verification_button"
-                    android:layout_width="match_parent"
+                    android:id="@+id/id_Check"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
+                    android:layout_weight="0"
                     android:backgroundTint="@color/orange80"
                     android:fontFamily="@font/suiteextrabold"
-                    android:text="본  인  인  증"
+                    android:text="중복 확인"
                     android:textColor="@color/white"
-                    android:textSize="23sp" />
+                    android:textSize="13sp" />
+            </LinearLayout>
 
-                <EditText
-                    android:id="@+id/join_email"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:background="@drawable/round_shape"
-                    android:ems="10"
-                    android:fontFamily="@font/suitebold"
-                    android:hint="이메일"
-                    android:inputType="textEmailAddress"
-                    android:minHeight="35dp"
-                    android:padding="10dp"
-                    tools:ignore="Autofill" />
+            <EditText
+                android:id="@+id/join_regist_numr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/round_shape"
+                android:ems="10"
+                android:fontFamily="@font/suitebold"
+                android:hint="주민번호"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                tools:ignore="Autofill" />
+
+            <EditText
+                android:id="@+id/join_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/round_shape"
+                android:ems="10"
+                android:fontFamily="@font/suitebold"
+                android:hint="이메일"
+                android:inputType="textEmailAddress"
+                android:minHeight="35dp"
+                android:padding="10dp"
+                tools:ignore="Autofill" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
                 <EditText
                     android:id="@+id/join_phone_num"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/round_shape"
+                    android:ems="10"
                     android:fontFamily="@font/suitebold"
                     android:hint="전화번호"
                     android:inputType="phone"
@@ -144,45 +138,92 @@
                     android:padding="10dp"
                     tools:ignore="Autofill" />
 
-                <EditText
-                    android:id="@+id/join_pw"
-                    android:layout_width="match_parent"
+
+                <Button
+                    android:id="@+id/phone_Check"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:backgroundTint="@color/orange80"
+                    android:fontFamily="@font/suiteextrabold"
+                    android:text="인증번호 전송"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/verificationLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/verificationNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:layout_marginEnd="10dp"
                     android:layout_marginBottom="10dp"
                     android:background="@drawable/round_shape"
                     android:ems="10"
                     android:fontFamily="@font/suitebold"
-                    android:hint="비밀번호"
-                    android:inputType="textPassword"
+                    android:hint="인증번호"
+                    android:inputType="phone"
                     android:minHeight="48dp"
                     android:padding="10dp"
                     tools:ignore="Autofill" />
 
-                <EditText
-                    android:id="@+id/join_pwCheck"
-                    android:layout_width="match_parent"
+
+                <Button
+                    android:id="@+id/verification_Check"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/round_shape"
-                    android:ems="10"
-                    android:fontFamily="@font/suitebold"
-                    android:hint="비밀번호 확인"
-                    android:inputType="textPassword"
-                    android:minHeight="48dp"
-                    android:padding="10dp"
-                    tools:ignore="Autofill" />
+                    android:layout_weight="0"
+                    android:backgroundTint="@color/orange80"
+                    android:fontFamily="@font/suiteextrabold"
+                    android:text="인증 확인"
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
             </LinearLayout>
 
-            <Button
-                android:id="@+id/join_button"
+            <EditText
+                android:id="@+id/join_pw"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:backgroundTint="@color/orange80"
-                android:fontFamily="@font/suiteextrabold"
-                android:text="회 원  가 입"
-                android:textColor="@color/white"
-                android:textSize="23sp" />
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/round_shape"
+                android:ems="10"
+                android:fontFamily="@font/suitebold"
+                android:hint="비밀번호"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                tools:ignore="Autofill" />
+
+            <EditText
+                android:id="@+id/join_pwCheck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_shape"
+                android:ems="10"
+                android:fontFamily="@font/suitebold"
+                android:hint="비밀번호 확인"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:padding="10dp"
+                tools:ignore="Autofill" />
         </LinearLayout>
-    </ScrollView>
+
+        <Button
+            android:id="@+id/join_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/orange80"
+            android:fontFamily="@font/suiteextrabold"
+            android:text="회 원  가 입"
+            android:textColor="@color/white"
+            android:textSize="23sp" />
+    </LinearLayout>
 
 </LinearLayout>

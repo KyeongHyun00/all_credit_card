@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:gravity="center_horizontal"
     android:background="@color/orange"
-    android:padding="30dp"
+
     tools:context=".LoadingActivity">
 
     <TextView
@@ -34,11 +34,37 @@
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottieLoad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="350dp"
         android:layout_marginTop="20dp"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/loading"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/stateTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/suiteextrabold"
+        android:gravity="bottom"
+        android:text="상태"
+        android:textColor="#fff"
+        android:textSize="14sp" />
+
+    <ProgressBar
+        android:id="@+id/statePb"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:gravity="bottom"
+        android:max="100"
+        android:progress="0"
+        android:progressTint="#fff"
+        android:scaleY="3" />
 
 </LinearLayout>

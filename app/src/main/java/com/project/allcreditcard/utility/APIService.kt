@@ -44,4 +44,11 @@ interface APIService {
         @Field("userId") userId: String,
         @Field("changePw") changePw: String
     ): Call<String>
+
+    //아이디 중복 확인
+    @FormUrlEncoded
+    @POST("/app/idCheck")
+    fun idCheck(
+        @Field("userID") userID: String
+    ): Call<String>
 }
